@@ -1,0 +1,68 @@
+* {
+  border: 1px solid white;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  grid-area: header;
+  background-color: blue;
+}
+
+.menu1 {
+  grid-area: menu1;
+  background-color: black;
+}
+
+.menu2 {
+  grid-area: menu2;
+  background-color: red;
+}
+
+.categories {
+  grid-area: categories;
+  background-color: blue;
+}
+
+.card {
+  grid-area: card;
+  background-color: green;
+}
+
+.recommended {
+  grid-area: recommended;
+  background-color: black;
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    display: grid;
+    margin: 0px;
+    padding: 0;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 79px 45px 60px 600px;
+
+    grid-template-areas:
+      "header header"
+      "menu1 menu2"
+      "categories categories"
+      "card card";
+  }
+}
+
+@media only screen and (min-width: 577px) {
+  .container {
+    display: grid;
+    margin: 0px;
+    padding: 0;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 79px 60px 600px;
+
+    grid-template-areas:
+      "menu1 header header menu2"
+      "categories categories categories categories"
+      "card card recommended recommended";
+  }
+}
